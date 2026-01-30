@@ -44,32 +44,28 @@ int main()
     }
 
 
-    std::vector<int> l;
+    std::deque<int> d;
 
-    l.push_back(5);
-    l.push_back(17);
+    d.push_back(5);
+    d.push_back(17);
 
-    std::cout << "l.back() " << l.back() << std::endl;
-    l.pop_back();
-    std::cout << "l.size() " <<l.size() << std::endl;
+    std::cout << "d.back() " << d.back() << std::endl;
+    d.pop_back();
+    std::cout << "d.size() " <<d.size() << std::endl;
 
-    std::vector<int>::iterator itv = l.begin();
-
+    std::deque<int>::iterator itv = d.begin();
     std::cout << "it (before --)" << *itv << std::endl;
-    itv--;
-    std::cout << "it (after --)" << *itv << std::endl;
-    itv--;
-    std::cout << "it (after --)" << *itv << std::endl;
+    // itv--;
+    // std::cout << "it (after --)" << *itv << std::endl;
 
+    d.push_back(3);
+    d.push_back(5);
+    d.push_back(737);
+    d.push_back(0);
 
-    l.push_back(3);
-    l.push_back(5);
-    l.push_back(737);
-    l.push_back(0);
+    std::cout << "deque d\n" << std::endl;
 
-    std::cout << "vector l\n" << std::endl;
-
-    for (std::vector<int>::iterator it = l.begin(); it != l.end(); ++it)
+    for (std::deque<int>::iterator it = d.begin(); it != d.end(); ++it)
     {
         std::cout << *it << std::endl;
     }
