@@ -26,5 +26,24 @@ int main()
         std::cout << num << "\n";
     }
 
+    Span sp2(10);
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    try
+    {
+        sp2.addNumber(numbers.begin(), numbers.end());
+    } 
+    catch (const std::out_of_range& e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+
+    std::cout << "Numbers in Span2: \n";
+    for (const auto& num : sp2.getNumbers())
+    {
+        std::cout << num << "\n";
+    }
+
     return 0;
 }

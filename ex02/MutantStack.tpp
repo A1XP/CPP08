@@ -18,7 +18,6 @@ MutantStack<T>& MutantStack<T>::operator=(const MutantStack& other)
 template <typename T>
 MutantStack<T>::~MutantStack() {}
 
-
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::begin()
 {

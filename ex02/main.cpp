@@ -43,7 +43,6 @@ int main()
         std::cout << *it << std::endl;
     }
 
-
     std::deque<int> d;
 
     d.push_back(5);
@@ -51,7 +50,7 @@ int main()
 
     std::cout << "d.back() " << d.back() << std::endl;
     d.pop_back();
-    std::cout << "d.size() " <<d.size() << std::endl;
+    std::cout << "d.size() " << d.size() << std::endl;
 
     std::deque<int>::iterator itv = d.begin();
     std::cout << "it (before --)" << *itv << std::endl;

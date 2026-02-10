@@ -2,6 +2,7 @@
 #define SPAN_HPP
 
 #include <vector>
+#include <stdexcept>
 
 class Span
 {
@@ -19,6 +20,20 @@ public:
     int longestSpan() const;
 
     const std::vector<int>& getNumbers() const;
+
+    template <typename It>
+    void addNumber(It begin, It end);
 };
+
+template <typename It>
+void Span::addNumber(It begin, It end)
+{
+    size_t count = std::distance(begin, end);
+
+    if (numbers.size() + count > maxSize)
+        throw std::out_of_range("Span is full");
+
+    numbers.insert(numbers.end(), begin, end);
+}
 
 #endif

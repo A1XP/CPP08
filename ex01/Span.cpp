@@ -1,7 +1,6 @@
 #include "Span.hpp"
 
 #include <algorithm>
-#include <stdexcept>
 
 Span::Span(unsigned int N) : maxSize(N) {}
 
